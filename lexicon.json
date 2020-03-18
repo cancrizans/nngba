@@ -123,6 +123,11 @@
 	"bigba":{
 		"cl":"n",
 		"tr":"spit"
+	},
+
+	"gbati":{
+		"cl":"v",
+		"tr":"receive"
 	}
 
 }
