@@ -1,0 +1,128 @@
+{
+	"buku":{
+		"cl":"n",
+		"tr":"night"
+	},
+
+	"dui":{
+		"cl":"pr",
+		"tr":"1SG"
+	},
+
+	"nngba":{
+		"cl":"n",
+		"tr":["secret", "the language Nnga"]
+	},
+
+	"glokpe":{
+		"cl":"v",
+		"tr":"to speak"
+	},
+
+	"gboo!n":{
+		"cl":"v",
+		"tr":"to eat"
+	},
+
+	"maambe":{
+		"cl":"n",
+		"tr":"pear"
+	},
+
+	"bzzke":{
+		"cl":"n",
+		"tr":"wolf"
+	},
+
+	"ddoo":{
+		"cl":"n",
+		"tr":"person"
+	},
+
+	"nmuagbi":{
+		"cl":"n",
+		"tr":"human"
+	},
+
+	"gloonma":{
+		"cl":"n",
+		"tr":"knowledge"
+	},
+
+	"tuna":{
+		"cl":"n",
+		"tr":"day"
+	},
+
+	"daugn":{
+		"cl":"n",
+		"tr":"grey (of Zeta Reticuli)"
+	},
+
+	"puipuu":{
+		"cl":"n",
+		"tr":"bird"
+	},
+
+	"=iko":{
+		"cl":"n",
+		"tr":"tree"
+	},
+
+	"gou":{
+		"cl":"adj",
+		"tr":"big, large"
+	},
+
+	"dnddnn":{
+		"cl":"n",
+		"tr":"tongue"
+	},
+
+	"naandua":{
+		"cl":"n",
+		"tr":"bloods"
+	},
+
+	"mi":{
+		"cl":"n",
+		"tr":"hand"
+	},
+
+	"giiba":{
+		"cl":"n",
+		"tr":"head"
+	},
+
+	"ngua":{
+		"cl":"n",
+		"tr":"breast (of woman)"
+	},
+
+	"bookpe":{
+		"cl":"n",
+		"tr":"ribcage, chest, bust"
+	},
+
+	"ddingua":{
+		"cl":"adj",
+		"tr":"male"
+
+	},
+
+	"aagbu":{
+		"cl":"adj",
+		"tr":"small"
+	},
+
+	"!ope":{
+		"cl":"n",
+		"tr":"eye"
+	},
+
+	"bigba":{
+		"cl":"n",
+		"tr":"spit"
+	}
+
+}

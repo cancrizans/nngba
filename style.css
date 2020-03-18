@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans:400,700|Noto+Serif&display=swap');
+
+@font-face {
+  font-family: Hatami;
+  src: url(font/Hatami.otf);
+}
+
+body {
+    
+
+   
+    font-family: 'Noto Serif', serif ;
+
+
+
+    font-size: 16px;
+
+    --font-family-titles:  'Noto Sans', sans-serif;
+    --font-weight-titles: 700;
+
+
+    --shading-col: #eeeeee;
+}
+
+.parttitle {
+		font-family: var(--font-family-titles);
+	font-weight: var(--font-weight-titles);
+	font-size: 3em;
+	text-align: center;
+	margin:2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-titles);
+	font-weight: var(--font-weight-titles);
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+ul{
+	margin: 1em;
+}
+
+li {
+	margin: 1em;
+}
+
+.tocghost{
+	list-style-type:none;
+}
+
+#toc ul{
+	padding-left: 0.3em; 
+}
+
+.page{
+	width: 100%;
+		display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.container{
+	max-width: 940px;
+
+}
+
+.frontpage{
+	width: 100%;
+}
+
+.a4page{
+	width: 100%;
+	padding-top: 141.4%;
+	position: relative;
+}
+
+.a4container{
+	  position: absolute;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+
+
+}
+
+.warning{
+	max-width: 260px;
+}
+.warningtwocols{
+	display: flex;
+	flex-direction: row;
+
+}
+.warningcol{
+	flex: 1 1 0px;
+	text-align: center;
+}
+
+.bigwarninglatin{
+	font-size:1.7em;
+	font-weight: bold;
+	margin-bottom: 0.7em;
+}
+
+.bigwarning{
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-bottom:0.5em;
+}
+
+.warningtext{
+	text-align: justify;
+	padding: 0.5em;
+}
+
+.a4containercentered{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.author{
+	display: flex;
+	width: 50%;
+	margin-top:10%;
+	margin-bottom:10%;
+
+	align-items: center;
+}
+
+.authorright{
+	align-self: flex-start;
+}
+.authorleft{
+	align-self: flex-end;
+}
+
+.author img{
+	min-width: 200px;
+}
+
+.maincolumn{
+	max-width: 50%;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+	margin:2em;
+}
+
+.sidebyside{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin:2em;
+}
+
+.spacing{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+
+
+
+
+.compact_table{
+	text-align: center;
+	border-collapse: collapse;
+
+}
+.compact_table  td, .compact_table th {
+  border: 1px solid #888;
+  	padding: 0.5em;
+}
+
+/*.compact_table tr:nth-child(even) {background-color: #f2f2f2;}*/
+
+.compact_table th {
+	background-color: #c0c0c0;
+}
+
+.shaded{
+	background-color: var(--shading-col);
+}
+
+.columlet{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tone{
+	font-size: 2em;
+}
+
+.uniformised_table tr{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.uniformised_table td{
+	flex-grow: 1;
+}
+
+.bigger {
+	font-size: 1.3em;
+}
+
+.biggerer{
+	font-size: 1.5em;
+}
+
+.hide {
+	border: 0px solid black !important;
+}
+
+.sql {
+	font-weight: 700;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.example{
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	margin-top:2em;
+	margin-bottom: 2em;
+}
+
+.example td{
+	padding-right: 1ex; 
+	
+}
+
+.glosscell {
+	font-size: 0.9em;
+}
+
+.translation{
+	font-style: italic;
+	font-size:1.1em;
+}
+
+.lexicon{
+	margin-top:2em;
+	margin-bottom: 15em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.leftcol{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1 1 0px;
+}
+
+#search_bar{
+	margin: 2em;
+}
+
+.word_inspector{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.inspector_lemma {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.inspector_props {
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+}
+
+.inspector_prop{
+	margin: 0.5em;
+}
+
+.inspector_translations{
+	font-size:1.2em;
+	font-style: italic;
+
+}
+
+.inspector_translations li{
+	margin-left: 0px;
+}
+.dictionary{
+	display: flex;
+	flex-direction: row;
+	
+
+	
+}
+
+.dictolum {
+	display: flex;
+	flex-direction: column;
+		flex: 1 1 0px;
+}
+
+
+
+.word {
+	font-size: 20px;
+}
+
+.lemma{
+	
+	font-weight: 700;
+}
+.details{
+	font-weight: 400;
+}
+
+.ipa, .pronunciation, .unicode_font {
+	
+	font-family: sans-serif;
+}
+
+.pronunciation {
+	font-size:1.1em;
+	margin:0.5em;
+}
+
+
+
+.conscript{
+	font-size: 1.5em;
+	font-family: 'Hatami';
+}
+
+.squidfont{
+	font-family: 'Hatami';
+}
+
+
+.cmnt {
+	color: red;
+	margin-left: 1ex;
+}
