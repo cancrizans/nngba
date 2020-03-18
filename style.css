@@ -184,7 +184,9 @@ li {
 
 
 
-
+.phonetic_table td{
+	font-size: 1.2em;
+}
 
 .compact_table{
 	text-align: center;
