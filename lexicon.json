@@ -128,6 +128,72 @@
 	"gbati":{
 		"cl":"v",
 		"tr":"receive"
+	},
+
+	"buume":{
+		"cl":"adj",
+		"tr":"short"
+	},
+
+	"paanma":{
+		"cl":"n",
+		"tr":"building"
+	},
+
+	"ddaikpnn":{
+		"cl":"v",
+		"tr":"inhabit"
+	},
+
+	"bliittu":{
+		"cl":"n",
+		"tr":["guts","inside of"]
+	},
+
+	"gama":{
+		"cl":"adv",
+		"tr":"greatly, wonderfully"
+	},
+
+	"toogbe":{
+		"cl":"v",
+		"tr":"imagine, wonder"
+	},
+
+	"ndu":{
+		"cl":"pr",
+		"tr":"1SG + 1SG"
+	},
+
+	"gbate":{
+		"cl":"conj",
+		"tr":"unless"
+	},
+
+	"gbate":{
+		"cl":"adj",
+		"tr":"opposite"
+	},
+
+	"tzpa":{
+		"cl":"n",
+		"tr":"wall"
+	},
+
+	"glaake":{
+		"cl":"v",
+		"tr":"walk"
+	},
+
+	"ko!a":{
+		"cl":"n",
+		"tr":["spine","on the back surface of, on the outer surface of"]
 	}
+
+
+
+
+
+
 
 }
