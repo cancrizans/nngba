@@ -27,7 +27,8 @@
 
 	"maambe":{
 		"cl":"n",
-		"tr":"pear"
+		"tr":"pear",
+		"symb":"🍐"
 	},
 
 	"bzzke":{
@@ -84,7 +85,7 @@
 
 	"naandua":{
 		"cl":"n",
-		"tr":"bloods"
+		"tr":"blood"
 	},
 
 	"mi":{
@@ -219,6 +220,29 @@
 		"cl":"n",
 		"tr":"finger",
 		"symb":"☝"
+	},
+
+	"dnkaa":{
+		"cl":"n",
+		"tr":"passage, transit"
+
+	},
+
+	"puuna":{
+		"cl":"v",
+		"tr":"check, verify"
+	},
+
+	"nagla":{
+		"cl":"n",
+		"tr":"water",
+		"symb":"💦"
+	},
+
+	"kaatii":{
+		"cl":"n",
+		"tr":"joy",
+		"symb":"😂"
 	}
 
 

@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
 <body>
 	<div class="page">
@@ -139,7 +140,7 @@
 					<tr><th>1p</th>				<td class="hide"></td>		<td>nmzz</td>		<td>nmau</td>			<td>nmuu</td>			<td>X</td>			</tr>
 					<tr><th>2</th>				<td class="hide" colspan="2"></td>			<td>na'oo</td>			<td>na'uu</td>			<td>X</td>			</tr>
 					<tr><th>proximal</th>				<td class="hide" colspan="3"></td>				<td>gebu</td>				<td>buna</td>			</tr>
-					<tr><th>proximal</th>				<td class="hide" colspan="4"></td>								<td>ttaa</td>			</tr>
+					<tr><th>obviative</th>				<td class="hide" colspan="4"></td>								<td>ttaa</td>			</tr>
 				</table>
 			</div>
 
@@ -211,10 +212,11 @@
 	</div>
 
 
-		<script
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			  crossorigin="anonymous"></script>
+
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$.ajaxSetup({
 			beforeSend: function(xhr){
@@ -232,7 +234,15 @@
 				lex = data;
 				onLoadLexicon();
 			});
+
+
 		});
+
+		function fullMojify(){
+			for (let e of $(".mojis")){
+				emojify.run(e);
+			}
+		}
 
 		function onLoadLexicon(){
 			let dictDiv = $(".dictionary");
@@ -276,58 +286,60 @@
 				wd.script = "";
 				for(let s of wd.syllables){
 					
-						wd.script += (s in glyphs)? glyphs[s]:"x";
+					wd.script += (s in glyphs)? glyphs[s]:"x";
 					
 				}
 
-				let ndiv = $(`<div class="dictord"><strong>${ww}</strong> ${wd.script}, <span class="ipa">/${wd.ipa}/</span> ${wd.cl}., ${wd.translation.join("; ")} </div>`)
+				let ndiv = $(`<div class="dictord"><strong>${ww}</strong> <span class="mojis">${wd.script}</span>, <span class="ipa">/${wd.ipa}/</span> ${wd.cl}., ${wd.translation.join("; ")} </div>`)
 				mycol.append(ndiv);
 
 				k++;
 			}
+
+			fullMojify();
 		}
 
 		//marks syllabics and syllabates with dots:
 
 		function syllabate(text){
 			return text.replace(/nn/g,"°°").replace(/(t|d|m|k|g|p|b)n/g,"$1°")
-						.replace(/nm/g,".$&")
-						.replace(/(t|d|m|k|g|p|b|!|^)n(t|d|m|k|g|p|b|!|$)/g,"$1°$2")
-						
-						
-						.replace(/(a|e|i|o|u|°|z)+/g,"$&.")
-						.replace(/\.(n|m)(t|d|k|g|p|b|!|$)/g,"$1.$2" )
-						.replace(/\.$/,"")
-						.replace(/^\./,"")
-						.replace(/\.\./g,".");
+			.replace(/nm/g,".$&")
+			.replace(/(t|d|m|k|g|p|b|!|^)n(t|d|m|k|g|p|b|!|$)/g,"$1°$2")
+
+
+			.replace(/(a|e|i|o|u|°|z)+/g,"$&.")
+			.replace(/\.(n|m)(t|d|k|g|p|b|!|$)/g,"$1.$2" )
+			.replace(/\.$/,"")
+			.replace(/^\./,"")
+			.replace(/\.\./g,".");
 		}
 
 
 		function toIPA(text){
 			text = syllabate(text).replace(/e/g,"ə")
-						.replace(/nm/g,"ŋ͡m")
-						.replace(/z/g,"z̩")
-						
-						.replace(/tt/g,"ʈ")
-						.replace(/dd/g,"ɖ")
-						.replace(/n(\.?)(ʈ|ɖ)/,"ɳ$1$2")
-						.replace(/n(\.?)(k|g)/,"ŋ$1$2")
-						
-						.replace(/kp/g,"k͡p")
-						.replace(/gb/g,"ɡ͡b")
-						
-						
+			.replace(/nm/g,"ŋ͡m")
+			.replace(/z/g,"z̩")
 
-						.replace(/(a|o|i|u|z̩|°)\1/g,"$1ː")
-						.replace(/o/g,"ɔ")
-						.replace(/ui/g,"oi")
-						.replace(/=/g,"ʘ")
-						.replace(/°/g,"n̩")
+			.replace(/tt/g,"ʈ")
+			.replace(/dd/g,"ɖ")
+			.replace(/n(\.?)(ʈ|ɖ)/,"ɳ$1$2")
+			.replace(/n(\.?)(k|g)/,"ŋ$1$2")
 
-						.replace(/n̩(ː?\.?)(ʈ|ɖ)/g,"ɳ̩$1$2")
+			.replace(/kp/g,"k͡p")
+			.replace(/gb/g,"ɡ͡b")
 
-						.replace(/gl/g,"ɡ͡ʟ");
-						
+
+
+			.replace(/(a|o|i|u|z̩|°)\1/g,"$1ː")
+			.replace(/o/g,"ɔ")
+			.replace(/ui/g,"oi")
+			.replace(/=/g,"ʘ")
+			.replace(/°/g,"n̩")
+
+			.replace(/n̩(ː?\.?)(ʈ|ɖ)/g,"ɳ̩$1$2")
+
+			.replace(/gl/g,"ɡ͡ʟ");
+
 
 			//text = text
 

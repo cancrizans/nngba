@@ -375,3 +375,7 @@ li {
 	color: red;
 	margin-left: 1ex;
 }
+
+.mojis{
+	font-family:  Segoe UI Emoji;
+}
