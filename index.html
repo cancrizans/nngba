@@ -127,17 +127,26 @@
 			<p>1s sp-Nngba-eak.</p>
 			<p>I speak Nngba.</p>
 
-			<h3>Bipronouns</h3>
+			<h3>Pronouns and Bipronouns</h3>
 
-			<p>Crazy idea: it happens very often that sentences involve two or more pronouns ("gimme that", "I hated it", "You told me"). What if two pronouns could be encrypted in a single word (bipronoun)? It could be hard for a non-speaker to split apart the two combining pronouns but there could be a relatively simple system to put them together. This limits word repetition (the "you" of "you told Anna" doesn't sound similar to the "you" of "you told me").</p>
+			<p>Nngba has the ability (and the strong suggestion) to incorporate two pronouns in a single word, called a bipronoun. By themselves, single pronouns (monopronouns) are only inflected for person and there is no distinction between 3rd person and demonstratives (this/that). The table of pronouns is this</p>
 
-<!-- 			<h3>Trigger registers</h3>
+			<div class="center">
+				<table class="compact_table">
+					<tr><th></th>				<th>1s</th>		<th>1p</th>		<th>2</th>		<th>proximal</th> 	<th>obviative</th>	</tr>
+					<tr><th>Null (mono)</th>	<td>dui</td>	<td>nmoge</td>	<td>noo</td>		<td>u</td>			<td>tti</td>			</tr>
+					<tr><th>1s</th>				<td>ndu</td>	<td>X</td>		<td>kau</td>		<td>duu</td>			<td>X</td>			</tr>
+					<tr><th>1p</th>				<td class="hide"></td>		<td>nmzz</td>		<td>nmau</td>			<td>nmuu</td>			<td>X</td>			</tr>
+					<tr><th>2</th>				<td class="hide" colspan="2"></td>			<td>na'oo</td>			<td>na'uu</td>			<td>X</td>			</tr>
+					<tr><th>proximal</th>				<td class="hide" colspan="3"></td>				<td>gebu</td>				<td>buna</td>			</tr>
+					<tr><th>proximal</th>				<td class="hide" colspan="4"></td>								<td>ttaa</td>			</tr>
+				</table>
+			</div>
 
-			<p>Very very crazy idea. Imagine some sentences are kind of in a "flipped" register. It could be every other sentence, as in the sequence would be implicitly straight, flipped, straight, flipped... or flipped sentences could be marked with a particle.</p>
+			<p>Cells marked with an X means that dipronoun doesn't exist and you should use two monos.</p>
 
-			<p>In a flipped sentence, all words or some words get their sounds flipped in some way (like labials to velars, or "a" to "u"). These words would come in flipped pairs with different meaning, so that only if you are aware of the overall flip you can disambiguate between the two. (Stupid ) Trying to decipher this as a regular language would fail.</p>
+			<p>Bips are unordered: 1s-prox is the same as prox-1s. It is the alignment rules from before that determine subject and object. If you need to mark a desperative (ergative) as per before, you are sadly forced to split a bipronoun.</p>
 
-			<p>This idea sounds really impractical to think about though and really doesn't fit with the theme</p> -->
 
 			<h3>Consonant Mutation</h3>
 			<em>Inspired by the Celtic Languages and Italian...</em>
@@ -188,7 +197,13 @@
 
 			<p>Relational nouns are a more convenient alternative. Instead of "the cat over the table" you say "cat head table", using the relational noun "head" which also has independent meaning as an anatomical part. A lot of new different relations can be coined using lexical entries (use "guts" for "inside" like the Mayans) and the system has an added layer of ambiguity for whoever doesn't know that the noun <em>is</em> a relational noun. In addition, there can easily be multiple, easy to figure out variants for the same meaning. For example, "behind" could be communicated with "spine" or "ass" or "nape" and already alternation of these three entries makes the notion of "behind" hard to decypher, but a speaker doesn't need to learn any proposition, just has to know names for body parts.</p>
 
+			<h3>Hieroglyphs</h3>
+
+			<p>Nngba is written using emoji-based glyphs that combine a pseudo-logography with a syllabary, called <strong>hieroglyphs</strong> as they are vaguely analogous. Basically, a glyph is assigned to some specific simple word that resembles it, and the <em>first</em> syllable only of that word becomes represented by that same glyph. Therefore <em>all</em> words are spelled with one glyph per syllable, but some special words have logographic representation in their first glyph.</p>
+
 			<h3>Dictionary</h3>
+
+			<p>Note: "x" in the hieroglyphs transcription means that syllable has not been assigned a glyph yet.</p>
 
 			<div class="dictionary">Loading dictionary...</div>
 
@@ -234,39 +249,73 @@
 				dictDiv.append(col);
 			}
 
-			let k = 0
-			for (let ww of Object.keys(lex).sort()){
+			glyphs = {}
 
-				let mycol = columns[Math.floor(k*Ncols/Nwords)];
+			
+			for (let ww of Object.keys(lex)){
 
+				
 				let wd = lex[ww];
 
 				wd.translation = (Array.isArray(wd.tr) ? wd.tr : [wd.tr]);
 
 				wd.ipa = toIPA(ww);
 
+				wd.syllables = syllabate(ww).split(".");
+				if('symb' in wd){
+					glyphs[wd.syllables[0]] = wd.symb;
+				}
 
-				let ndiv = $(`<div class="dictord"><strong>${ww}</strong>, <span class="ipa">/${wd.ipa}/</span> ${wd.cl}., ${wd.translation.join("; ")} </div>`)
+			}
+			let k = 0
+			for (let ww of Object.keys(lex).sort()){
+
+				let mycol = columns[Math.floor(k*Ncols/Nwords)];
+				let wd = lex[ww];
+
+				wd.script = "";
+				for(let s of wd.syllables){
+					
+						wd.script += (s in glyphs)? glyphs[s]:"x";
+					
+				}
+
+				let ndiv = $(`<div class="dictord"><strong>${ww}</strong> ${wd.script}, <span class="ipa">/${wd.ipa}/</span> ${wd.cl}., ${wd.translation.join("; ")} </div>`)
 				mycol.append(ndiv);
 
 				k++;
 			}
 		}
 
-		function toIPA(text){
-			text = text.replace(/e/g,"ə")
-						.replace(/nm/g,"ŋ͡m")
-						.replace(/nn/g,"°°")
-						.replace(/(t|d|m|k|g|p|b)n/g,"$1°")
+		//marks syllabics and syllabates with dots:
+
+		function syllabate(text){
+			return text.replace(/nn/g,"°°").replace(/(t|d|m|k|g|p|b)n/g,"$1°")
+						.replace(/nm/g,".$&")
 						.replace(/(t|d|m|k|g|p|b|!|^)n(t|d|m|k|g|p|b|!|$)/g,"$1°$2")
+						
+						
+						.replace(/(a|e|i|o|u|°|z)+/g,"$&.")
+						.replace(/\.(n|m)(t|d|k|g|p|b|!|$)/g,"$1.$2" )
+						.replace(/\.$/,"")
+						.replace(/^\./,"")
+						.replace(/\.\./g,".");
+		}
+
+
+		function toIPA(text){
+			text = syllabate(text).replace(/e/g,"ə")
+						.replace(/nm/g,"ŋ͡m")
+						.replace(/z/g,"z̩")
+						
 						.replace(/tt/g,"ʈ")
 						.replace(/dd/g,"ɖ")
-						.replace(/n(ʈ|ɖ)/,"ɳ$1")
-						.replace(/n(k|g)/,"ŋ$1")
+						.replace(/n(\.?)(ʈ|ɖ)/,"ɳ$1$2")
+						.replace(/n(\.?)(k|g)/,"ŋ$1$2")
 						
 						.replace(/kp/g,"k͡p")
 						.replace(/gb/g,"ɡ͡b")
-						.replace(/z/g,"z̩")
+						
 						
 
 						.replace(/(a|o|i|u|z̩|°)\1/g,"$1ː")
@@ -275,12 +324,12 @@
 						.replace(/=/g,"ʘ")
 						.replace(/°/g,"n̩")
 
-						.replace(/n̩(ː?)(ʈ|ɖ)/g,"ɳ̩$1$2")
+						.replace(/n̩(ː?\.?)(ʈ|ɖ)/g,"ɳ̩$1$2")
 
 						.replace(/gl/g,"ɡ͡ʟ");
 						
 
-			text = text.replace(/(a|e|i|o|u|n̩|ɳ̩|z̩)+(ː?)(n|m|l)?/,"$&.")
+			//text = text
 
 
 			return text;

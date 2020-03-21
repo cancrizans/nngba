@@ -11,7 +11,8 @@
 
 	"nngba":{
 		"cl":"n",
-		"tr":["secret", "the language Nnga"]
+		"tr":["secret", "the language Nnga"],
+		"symb":"🤫"
 	},
 
 	"glokpe":{
@@ -61,7 +62,8 @@
 
 	"puipuu":{
 		"cl":"n",
-		"tr":"bird"
+		"tr":"bird",
+		"symb":"🐦"
 	},
 
 	"=iko":{
@@ -76,7 +78,8 @@
 
 	"dnddnn":{
 		"cl":"n",
-		"tr":"tongue"
+		"tr":"tongue",
+		"symb":"👅"
 	},
 
 	"naandua":{
@@ -96,7 +99,8 @@
 
 	"ngua":{
 		"cl":"n",
-		"tr":"breast (of woman)"
+		"tr":"breast (of woman)",
+		"symb":"🤱"
 	},
 
 	"bookpe":{
@@ -117,7 +121,8 @@
 
 	"!ope":{
 		"cl":"n",
-		"tr":"eye"
+		"tr":"eye",
+		"symb":"👁️"
 	},
 
 	"bigba":{
@@ -127,7 +132,8 @@
 
 	"gbati":{
 		"cl":"v",
-		"tr":"receive"
+		"tr":"receive",
+		"symb":"🤲"
 	},
 
 	"buume":{
@@ -137,7 +143,8 @@
 
 	"paanma":{
 		"cl":"n",
-		"tr":"building"
+		"tr":"building",
+		"symb":"🏢"
 	},
 
 	"ddaikpnn":{
@@ -188,11 +195,31 @@
 	"ko!a":{
 		"cl":"n",
 		"tr":["spine","on the back surface of, on the outer surface of"]
+	},
+
+	"komaa":{
+		"cl":"v",
+		"tr":"to cry",
+		"symb":"😭"
+	},
+
+	"puugo":{
+		"cl":"n",
+		"tr":"tooth",
+		"symb":"🦷"
+	},
+
+	"kpeti":{
+		"cl":"n",
+		"tr":"coffee",
+		"symb":"☕"
+	},
+
+	"gomaa":{
+		"cl":"n",
+		"tr":"finger",
+		"symb":"☝"
 	}
-
-
-
-
 
 
 
