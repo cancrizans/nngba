@@ -243,8 +243,76 @@
 		"cl":"n",
 		"tr":"joy",
 		"symb":"😂"
+	},
+
+	"kpenma":{
+		"cl":"n",
+		"tr":"carpet"
+	},
+
+	"!um":{
+		"cl":"adj",
+		"tr":"all"
+	},
+
+	"!umpa":{
+		"cl":"n",
+		"tr":"moon",
+		"symb":"🌙"
+	},
+
+	"glaattn":{
+		"cl":"v",
+		"tr":"put, place"
+	},
+
+	"pa=oo":{
+		"cl":"n",
+		"tr":"skeleton, bone",
+		"symb":"💀"
+	},
+
+	"bunaa":{
+		"cl":"n",
+		"tr":"umbrella",
+		"symb":"☂"
+	},
+
+	"na!ii":{
+		"cl":"n",
+		"tr":"bikini",
+		"symb":"👙"
+	},
+
+	"giignn":{
+		"cl":"n",
+		"tr":"ghost",
+		"symb":"👻"
+	},
+
+	"baddau":{
+		"cl":"n",
+		"tr":"thread",
+		"symb":"🧶"
+	},
+
+
+	"glaakzn":{
+		"cl":"n",
+		"tr":"airplane",
+		"symb":"✈️"
+	},
+
+	"ttnkuu":{
+		"cl":"n",
+		"tr":"foot",
+		"symb":"🦶"
+	},
+
+	"nmari":{
+		"cl":"n",
+		"tr":"drool",
+		"symb":"🤤"
 	}
-
-
 
 }
