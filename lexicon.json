@@ -67,7 +67,7 @@
 		"symb":"🐦"
 	},
 
-	"=iko":{
+	"#iko":{
 		"cl":"n",
 		"tr":"tree"
 	},
@@ -266,7 +266,7 @@
 		"tr":"put, place"
 	},
 
-	"pa=oo":{
+	"pa#oo":{
 		"cl":"n",
 		"tr":"skeleton, bone",
 		"symb":"💀"
@@ -313,6 +313,18 @@
 		"cl":"n",
 		"tr":"drool",
 		"symb":"🤤"
+	},
+
+	"#imau":{
+		"cl":"n",
+		"tr":"horns sign",
+		"symb": "🤟"
+	},
+
+	"tiinmu":{
+		"cl":"n",
+		"tr":"marriage",
+		"symb":"👰"
 	}
 
 }

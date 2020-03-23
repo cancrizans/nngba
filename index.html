@@ -77,7 +77,7 @@
 
 				<table class="compact_table unicode_font phonetic_table">
 					<tr><th>Phoneme</th><td>ʈ</td><td>ɖ</td><td>n</td><td>ɳ</td><td>ŋ</td><td>l</td><td> ɭ</td><td>ʟ</td><td>ŋ͡m</td><td>k͡p</td><td>ɡ͡b</td><td>ǁ</td><td>ʔ</td><td>n̩</td><td>z̩</td><td>ə</td><td>ɔ</td><td>oi</td><td>Long vowels</td></tr>
-					<tr><th>Romanisation</th><td>tt</td><td>dd</td><td colspan="3">n</td><td colspan="3">l</td><td>nm</td><td>kp</td><td>gb</td><td>=</td><td>'</td><td>n</td><td>z</td><td>e</td><td>o</td><td>ui</td><td>double letters</td></tr>
+					<tr><th>Romanisation</th><td>tt</td><td>dd</td><td colspan="3">n</td><td colspan="3">l</td><td>nm</td><td>kp</td><td>gb</td><td>#</td><td>'</td><td>n</td><td>z</td><td>e</td><td>o</td><td>ui</td><td>double letters</td></tr>
 				</table>
 
 				<p>Everything else uses the same symbol as in the IPA. Some may also romanise <span class="ipa">ŋ͡m</span> as ngm, but the g glyph is not really necessary as the sequence <span class="ipa">nm</span> (with non-syllabic n) cannot occur.</p>
@@ -219,7 +219,13 @@
 
 			<h3>Hieroglyphs</h3>
 
-			<p>Nngba is written using emoji-based glyphs that combine a pseudo-logography with a syllabary, called <strong>hieroglyphs</strong> as they are vaguely analogous. Basically, a glyph is assigned to some specific simple word that resembles it, and the <em>first</em> syllable only of that word becomes represented by that same glyph. Therefore <em>all</em> words are spelled with one glyph per syllable, but some special words have logographic representation in their first glyph.</p>
+			<p>Nngba is written using emoji-based glyphs that combine a pseudo-logography with a syllabary, called <strong>hieroglyphs</strong> as they are vaguely analogous. Each syllable is represented by a glyph; that glyph is usually logographically related to a word that starts with</p>
+
+			<p>The special glyph <span class="mojis">👌</span> (called <strong>!u!u</strong>) is used to mark reduplication of the following syllable - you don't actually use the same glyph twice!</p>
+
+			<div class="syllabary">
+				Loading syllabary...
+			</div>
 
 			<h3>Dictionary</h3>
 
@@ -257,11 +263,7 @@
 
 		});
 
-		function fullMojify(){
-			for (let e of $(".mojis")){
-				emojify.run(e);
-			}
-		}
+
 
 		function onLoadLexicon(){
 			let dictDiv = $(".dictionary");
@@ -315,7 +317,11 @@
 				k++;
 			}
 
-			fullMojify();
+
+			$(".syllabary").html("");
+			$(".syllabary").append(Object.keys(glyphs).sort().map(g => 
+			                                               $(`<div class="syllabarycell"><div class="syllabarysyllable">${normalise(g)}</div> <div class="syllabaryglyph mojis">${glyphs[g]}</div> </div>`)));
+
 		}
 
 		//marks syllabics and syllabates with dots:
@@ -331,6 +337,11 @@
 			.replace(/\.$/,"")
 			.replace(/^\./,"")
 			.replace(/\.\./g,".");
+		}
+
+
+		function normalise(text){
+			return text.replace(/°/g,"n");
 		}
 
 
@@ -352,7 +363,7 @@
 			.replace(/(a|o|i|u|z̩|°)\1/g,"$1ː")
 			.replace(/o/g,"ɔ")
 			.replace(/ui/g,"oi")
-			.replace(/=/g,"ʘ")
+			.replace(/#/g,"ǁ")
 			.replace(/°/g,"n̩")
 
 			.replace(/n̩(ː?\.?)(ʈ|ɖ)/g,"ɳ̩$1$2")
