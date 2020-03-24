@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans:400,700|Noto+Serif&display=swap');
 
-@font-face {
-  font-family: Hatami;
-  src: url(font/Hatami.otf);
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@900&display=swap');
+
+
+.bigtitle{
+	font-family: 'Raleway', serif;
+	font-weight: 900;
+	font-size: 3em;
+	letter-spacing: 0.5em;
 }
+
 
 body {
     
