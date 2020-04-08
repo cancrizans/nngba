@@ -15,7 +15,7 @@
 		"symb":"🤫"
 	},
 
-	"glokpe":{
+	"~!lokpe":{
 		"cl":"v",
 		"tr":"to speak"
 	},
@@ -67,7 +67,7 @@
 		"symb":"🐦"
 	},
 
-	"#iko":{
+	"!xiko":{
 		"cl":"n",
 		"tr":"tree"
 	},
@@ -266,7 +266,7 @@
 		"tr":"put, place"
 	},
 
-	"pa#oo":{
+	"pa!xoo":{
 		"cl":"n",
 		"tr":"skeleton, bone",
 		"symb":"💀"
@@ -315,7 +315,7 @@
 		"symb":"🤤"
 	},
 
-	"#imau":{
+	"!ximau":{
 		"cl":"n",
 		"tr":"horns sign",
 		"symb": "🤟"
@@ -325,6 +325,94 @@
 		"cl":"n",
 		"tr":"marriage",
 		"symb":"👰"
+	},
+
+	"duumi":{
+		"cl":"n",
+		"tr":"sickness",
+		"symb":"🤒"
+	},
+
+	"nmoo":{
+		"cl":"v",
+		"tr":"to come, to arrive"
+	},
+
+	"!xa":{
+		"cl":"conj",
+		"tr":"and"
+	},
+
+	"gbnkla":{
+		"cl":"adj",
+		"tr":"healthy"
+	},
+
+	"geddo":{
+		"cl":"n",
+		"tr":"face"
+	},
+
+	"bombui":{
+		"cl":"v",
+		"tr":"to observe, study, examine, check, verify",
+		"symb":"🔍"
+	},
+
+	"mi!u":{
+		"cl":"n",
+		"tr":"penis",
+		"symb":"🍆"
+	},
+
+	"nmoo!xa":{
+		"cl":"n",
+		"tr":"pig",
+		"symb":"🐷"
+	},
+
+	"gbnti":{
+		"cl":"?",
+		"tr":"[unknown]",
+		"symb":"🖨️"
+	},
+
+	"klatte":{
+		"cl":"n",
+		"tr":"time",
+		"symb":"⏳"
+	},
+
+	"gego":{
+		"cl":"n",
+		"tr":"money",
+		"symb":"💰"
+	},
+
+	"bui!oo":{
+		"cl":"n",
+		"tr":"rocket, spaceship",
+		"symb":"🚀"
+	},
+
+	"ddomuu":{
+		"cl":"n",
+		"tr":"frog",
+		"symb":"🐸"
+	},
+
+	"~!liini":{
+		"cl":"n",
+		"tr":"fire",
+		"symb":"🔥"
+	},
+
+	"ni!o":{
+		"cl":"n",
+		"tr":"mother",
+		"symb":"🤰"
 	}
+
+
 
 }
