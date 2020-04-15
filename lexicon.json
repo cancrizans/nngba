@@ -31,7 +31,7 @@
 		"symb":"🍐"
 	},
 
-	"bzzke":{
+	"buuke":{
 		"cl":"n",
 		"tr":"wolf"
 	},
@@ -183,7 +183,7 @@
 		"tr":"opposite"
 	},
 
-	"tzpa":{
+	"~!upa":{
 		"cl":"n",
 		"tr":"wall"
 	},
@@ -297,7 +297,7 @@
 	},
 
 
-	"glaakzn":{
+	"glaaken":{
 		"cl":"n",
 		"tr":"airplane",
 		"symb":"✈️"
@@ -411,8 +411,49 @@
 		"cl":"n",
 		"tr":"mother",
 		"symb":"🤰"
-	}
+	},
 
+	"!upua":{
+		"cl":"v",
+		"tr":"to level, to smooth out"
+	},
+
+	"~!xoombi":{
+		"cl":"n",
+		"tr":["fish","guard"],
+		"symb":"🐟"
+	},
+
+	"goni":{
+		"cl":"n",
+		"tr":"palm (of hand)"
+	},
+
+	"~!laaddu":{
+		"cl":"v",
+		"tr":"to borrow"
+	},
+
+	"bo":{
+		"cl":"n",
+		"tr":"navel"
+	},
+
+	"de!a":{
+		"cl":"n",
+		"tr":"cow"
+	},
+
+	"muu":{
+		"cl":"part",
+		"tr":"INF marker"
+	},
+
+	"!xetta":{
+		"cl":"n",
+		"tr":"mouth",
+		"symb":"👄"
+	}
 
 
 }
